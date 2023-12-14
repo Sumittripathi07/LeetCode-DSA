@@ -2,11 +2,15 @@
 # Output: true
 # Explanation: "amanaplanacanalpanama" is a palindrome.
 
-import re
-
-s = "ab_a"
-word = re.sub(r"_\W+", "", s).lower()
-# word.strip("_")
-print(word)
-if word == word[::-1]:
-    print("True")
+s = "A man, a plan, a canal: Panama"
+x = ""
+for i in s:
+    if i.isalnum():
+        x = x + i
+print(x)
+x = x.lower()
+print(x)
+if x == x[::-1]:
+    print(True)
+else:
+    print(False)
